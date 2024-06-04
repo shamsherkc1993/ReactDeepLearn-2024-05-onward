@@ -120,3 +120,11 @@ button.toogle {
   padding: 5px 10px;
   cursor: pointer;
 }
+
+li.completed {
+  box-shadow: rgb(62, 150, 0) 0px 1px 4px;
+}
+
+li.incompleted {
+  box-shadow: rgba(135, 20, 0, 0.689) 0px 1px 4px;
+}

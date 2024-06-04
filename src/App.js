@@ -21,9 +21,12 @@ function App() {
         <button className="toogle" onClick={() => setShow(!show)}>
           Toggle
         </button>
-        {show &&
+        {tasks &&
           tasks.map((task) => (
-            <li key={task.id}>
+            <li
+              key={task.id}
+              className={task.completed ? "completed" : "incompleted"}
+            >
               <span>
                 {task.id} - {task.name}
               </span>
