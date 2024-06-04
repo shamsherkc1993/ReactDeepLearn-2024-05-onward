@@ -112,3 +112,11 @@ button.trigger {
 .hidden {
   display: none;
 }
+button.toogle {
+  border: 0px;
+  border-radius: 5px;
+  background-color: #0f3460;
+  color: #ffffff;
+  padding: 5px 10px;
+  cursor: pointer;
+}

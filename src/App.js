@@ -8,6 +8,8 @@ function App() {
     { id: 8391, name: "Watch Lectures", completed: false },
   ]);
 
+  const [show, setShow] = useState(true);
+
   function handleDelete(id) {
     setTasks(tasks.filter((newtask) => newtask.id !== id));
   }
@@ -16,16 +18,20 @@ function App() {
     <div className="App">
       <h1>Task List</h1>
       <ul>
-        {tasks.map((task) => (
-          <li key={task.id}>
-            <span>
-              {task.id} - {task.name}
-            </span>
-            <button onClick={() => handleDelete(task.id)} className="delete">
-              Delete
-            </button>
-          </li>
-        ))}
+        <button className="toogle" onClick={() => setShow(!show)}>
+          Toggle
+        </button>
+        {show &&
+          tasks.map((task) => (
+            <li key={task.id}>
+              <span>
+                {task.id} - {task.name}
+              </span>
+              <button onClick={() => handleDelete(task.id)} className="delete">
+                Delete
+              </button>
+            </li>
+          ))}
       </ul>
     </div>
   );
